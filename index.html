@@ -25,6 +25,9 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#9f00a7">
 <meta name="theme-color" content="#752188">
+  <style>
+    .popup-overlay{position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0,.7);transition:opacity .5s;visibility:hidden;opacity:0;visibility:visible;opacity:1;display:none}.popup-container{margin:70px auto;padding:20px;background:#fff;border-radius:5px;width:50%;position:relative;transition:all 5s ease-in-out}.popup-container h3{margin-top:0;color:#333;font-family:Tahoma,Arial,sans-serif;font-size:1.4rem;margin-bottom:15px}.popup-container .popup-close{position:absolute;top:20px;right:30px;transition:all .2s;font-size:30px;font-weight:700;text-decoration:none;color:#333;right:20px}.popup-container .popup-close:hover{color:#9c27b0}.popup-container .popup-description{color:#1d1e22;font-size:.9rem;margin-bottom:15px}.popup-container .popup-content{overflow:auto;max-height:80vh;margin-bottom:10px;max-height:calc(100vh - 132px);height:100%}.popup-container .popup-content p{margin-bottom:15px}@media screen and (max-width:700px){.popup-container{width:70%}}@media screen and (max-width:800px){.popup-container{width:100%;margin:0 auto;border-radius:0}}.item-block{background-color:#fff;padding:12px 7px;-webkit-box-shadow:0 5px 20px -5px rgba(0,0,0,.3);box-shadow:0 5px 20px -5px rgba(0,0,0,.3);border-radius:4px;margin:5px 10px 10px 10px}.item-block h4{background:purple;color:#fff;padding:2px 5px;border-bottom-right-radius:4px;border-bottom-left-radius:4px}.popup-content>h3{font-size:1.2rem;border-bottom:1px solid #ccc;line-height:35px;display:inline-block;margin-left:10px;margin-bottom:5px}.image-responsive{height:100%;vertical-align:top;display:inline-block}.item-block .item-content{padding-top:5px}.item-block .item-content p{font-size:.9rem;margin-bottom:5px}.item-block .item-content b{font-weight:700}.item-block .item-content .price-opt{color:red;font-size:1rem;font-weight:700}.item-block .item-content .price-client{font-size:1rem}.item-content>img{max-width:30%;max-height:100px;width:30%;height:100%;float:left;margin-right:5px}.item-content>.description{width:100%}.item-content .link{display:block;width:100%;margin-top:15px;text-align:right}.item-content .link a{padding:5px 10px;background:rgb(179 179 179 / 20%);border-radius:7px;text-decoration:none;color:#1d1e22;border-radius:0;border-top-left-radius:4px;position:relative;left:7px;bottom:-7px;border-bottom-right-radius:4px}.item-content .link a:hover{opacity:.9}.popup-content::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3);background-color:#f5f5f5}.popup-content::-webkit-scrollbar{width:6px;background-color:#f5f5f5}.popup-content::-webkit-scrollbar-thumb{background-color:purple}@media screen and (min-width:720px){.item-block{display:inline-block;margin:7px 5px;max-width:279px;width:100%;vertical-align:top}.popup-content>h3:before{width:100%;content:"";display:block}.popup-content>h3{display:table-cell}.popup-container{width:100%;max-width:630px}}.item-block>.item-content>img{height:78px;width:78px;max-width:78px;max-height:78px;border-radius:4px}
+  </style>
 </head>
 
 <body>
@@ -97,10 +100,26 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
                                     <div class="block-text has-rtl" block_id="46707841" block="[object Object]" account="[object Object]" index="6" page_id="6005623" style="text-align: center; line-height: 1.4; font-size: 1.03rem; color: rgb(173, 181, 189) !important; font-family: Comfortaa, cursive !important; position: relative; top: -15 px ;">Ваш личный менеджер завода</div>
                                   </div>
                                 </div>
+                                
+                                <!-------------------->
+                                
+                                <div class="block-item block-link">
+                                  <div class="b-61030402">
+                                      <a rel="noopener" href="#" data-popup-id="catalog" onclick="popupOpen(this);" target="_top" class="button btn-link btn-link-styled without-thumb has-animation has-animation-buzz has-animation-blink" block_id="61030402" account="[object Object]" index="3">
+                                      <div>
+                                        <div class="btn-link-title">
+                                          📙 Онлайн каталог
+                                        </div>
+                                        <div class="btn-link-subtitle">Скидки до 70% даже из этого списка!</div>
+                                      </div>
+                                    </a></div>
+                                </div>
+                                
+                                <!------------------------>
 
                                 <div class="block-item block-link">
                                   <div class="b-61030402">
-                                      <a rel="noopener" href="https://api.whatsapp.com/send?phone=79137401605&text=Михаил, здравствуйте!" target="_top" class="button btn-link btn-link-styled without-thumb has-animation has-animation-buzz has-animation-blink" block_id="61030402" account="[object Object]" index="3">
+                                      <a rel="noopener" href="https://api.whatsapp.com/send?phone=79137401605&text=Михаил, здравствуйте!" target="_top" class="button btn-link btn-link-styled without-thumb" block_id="61030402" account="[object Object]" index="3">
                                       <div>
                                         <div class="btn-link-title">
                                           ✅ Связаться в WhatsApp
@@ -178,7 +197,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
                                 <div class="block-item block-link">
                                   <div class="b-54608165"><a rel="noopener" href="https://luchera.com/catalog" target="_top" class="button btn-link btn-link-styled without-thumb" block_id="54608165" account="[object Object]" index="8">
                                       <div>
-                                        <div class="btn-link-title">📙 Онлайн-каталог</div>
+                                        <div class="btn-link-title">📙 Онлайн-каталог (на сайте)</div>
                                         <div class="btn-link-subtitle">Каталог изделий, характеристики и фото</div>
                                       </div>
                                     </a></div>
@@ -264,6 +283,219 @@ alt="" style="border:0" width="88" height="31"/></a><!--/LiveInternet-->
       </div>
     </div>
   </div>
+  
+    <!-- PopUps -->
+  
+  <div data-popup-id="catalog" class="popup popup-overlay">
+  <div class="popup-container">
+    <h3 class="popup-title">Каталог</h3>
+    <div class="popup-description">
+      Каталог типовых дизайнерских светодиодных изделий завода ТД Лючера
+    </div>
+    <a onclick="popupClose(this);" class="popup-close" href="#">&times;</a>
+    <div class="popup-content">
+      <!--<div class="item-block">
+        <h4>Светильник TLCRIST4-60-01</h4>
+        <div class="item-content">
+           <img src="https://i.imgur.com/LaQ9AwO.png" class="image image-responsive">
+          <div class="description">
+            <p>Артикул: TLCRIST4-60-01</p>
+            <p>Размеры: 600х600х900мм</p>
+            <p>Цена (розница): 23 879р</p>
+            <p>Цена (опт): 14 924р</p>
+          </div>
+          <div class="link">
+            <a href="#" target="_blank" title="Связь с Вашим менеджером">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>-->
+      <h3>Светильники</h3>
+      <div class="item-block">
+        <h4>Линейный светильник TLCRIST4-60-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/LaQ9AwO.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLCRIST4-60-01</p>
+            <p><b>Размеры:</b> 600х600х900мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">14 924р</span></p>
+            <p><b>Цена (опт):</b>
+              <span class="price-opt">23 879р</span </p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="item-block">
+        <h4>Линейный светильник TLCRIST5-50-03</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/0TWvywL.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> BLABLA-01</p>
+            <p><b>Размеры:</b> 500х475х900мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">27 265р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">17 040р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="item-block">
+        <h4>Линейный светильник TLOL1-120-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/0TWvywL.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLOL1-120-01</p>
+            <p><b>Размеры:</b> 1200х50х900мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">8 940р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">5 252р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="item-block">
+        <h4>Линейный светильник TLAR1-120-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/o4Zz4Y7.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLAR1-120-01</p>
+            <p><b>Размеры:</b> 1200х50х900мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">8 940р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">5 252р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <div class="item-block">
+        <h4>Линейный светильник TLAR2-100-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/Aew1xfF.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLAR2-100-01</p>
+            <p><b>Размеры:</b> 1200х290х80мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">10 603р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">6 229р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <h3>Люстры</h3>
+      <div class="item-block">
+        <h4>Люстра TLCUB2-55/70-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/0TWvywL.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLCUB2-55/70-01</p>
+            <p><b>Размеры:</b> 700x700x800мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">29 522р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">17 344р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="item-block">
+        <h4>Люстра TLRO2-40/70-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/i3gdWZl.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TLCUB2-55/70-01</p>
+            <p><b>Размеры:</b> 700х700х900мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">24 324р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">14 290р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Бра</h3>
+      <div class="item-block">
+        <h4>Бра дизайнерский TTAR3</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/xDEXDrX.png" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> TTAR3-100/130/150-01</p>
+            <p><b>Размеры:</b> 400x400x1000мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">27 651р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">17 282р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>
+      <!--<div class="item-block">
+        <h4>Люстра светодиодная BLABLA-01</h4>
+        <div class="item-content">
+          <img src="https://i.imgur.com/0I0Ayal.jpeg" class="image image-responsive">
+          <div class="description">
+            <p><b>Артикул:</b> BLABLA-01</p>
+            <p><b>Размеры:</b> 322x80x125мм</p>
+            <p><b>Цена (розница):</b> <span class="price-client">12 565р</span></p>
+            <p><b>Цена (опт):</b> <span class="price-opt">7 565р</span></p>
+          </div>
+          <div class="link">
+            <a onclick="getContacts(this);" href="#" target="_blank" title="Тест">Узнать подробнее</a>
+          </div>
+        </div>
+      </div>-->
+    </div>
+    <div class="popup-footer">
+      <p>Для совершения заказа со скидкой, свяжитесь с менеджером удобным способом.</p>
+    </div>
+  </div>
+</div>
+  
+    <!------------------>
+  <script async>
+    var popupClose = function (e) {
+  console.info(e.target);
+  popupId = e.parentNode.parentNode;
+  popupId.style = "display: none;";
+  popupId.childNodes[1].classList.remove("popup-active");
+  //console.info(popupId.childNodes[1]); //e.parentNode
+};
+
+var popupOpen = function (e) {
+  //console.info(e.target);
+  popupId = e.getAttribute("data-popup-id");
+  //console.info(e.getAttribute('data-popup-id'));
+  popup = document.querySelector('.popup[data-popup-id="' + popupId + '"]');
+  popup.style = "display: block;";
+  popup.childNodes[1].classList.add("popup-active");
+  popup, (popupId = null);
+};
+
+document.addEventListener("mouseup", function (e) {
+  popup = document.querySelector(".popup-container.popup-active");
+  if (!popup) {
+    return;
+  }
+  // console.info(e.target);
+  // console.info(popup);
+  if (e.target != popup && !popup.contains(e.target)) {
+    console.info("closed");
+    popup.parentNode.style = "display: none;";
+    popup.classList.remove("popup-active");
+  }
+});
+
+var getContacts = function (e) {
+  event.preventDefault();
+};
+
+  </script>
 </body>
 
 </html>
