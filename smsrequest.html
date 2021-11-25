@@ -1,0 +1,129 @@
+<html lang="ru">
+
+<head>
+  <meta charset="utf8">
+  <meta content="" name="author">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta content="telephone=no" name="format-detection">
+  <meta property="og:image" content="">
+  <meta name="robots" content="noodp, noydir">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оставить заявку</title> <!--       -->
+  <!---->
+  
+  <link href="smsrequest.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="animate.min.css" rel="stylesheet" type="text/css" media="all" />
+  
+  <style>
+    input[type="checkbox"]:checked{
+      background: #673ab7;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-bg"></div>
+    <div class="container-inner">
+      <div class="container-stage">
+        <div class="container-inline">
+          <div class="container-inside">
+            <div class="container-content" id="js-forms">
+              <div class="logo-b64" id="logo" style="display:block"><img src="https://i.imgur.com/Sugl5Hp.jpg"></div>
+              <form class="modal__form form form-registration with-checkbox" id="order-start" data-validation="">
+                <div class="container__title">Получите скидку до 70% на<br>СВЕТОДИОДНЫЕ ЛЮСТРЫ и СВЕТИЛЬНИКИ российского бренда ТД Лючера <br></div>
+                <div class="container__text"><br> </div>
+                <div class="form-group valid"> <input class="form__control form__control--bordered" id="phone" type="tel" name="phone" data-name="phone"> <label class="form__label" for="phone">Укажите Ваш телефон</label> </div>
+                <div class="form__consent">
+                <div style="font-size: 0.8em; color: gray;" class="checkbox">
+                <input style="position: relative; margin-left: 25px; border: 1px solid black; width: 15px; height: 15px; margin-right: 5px;" id="check" name="check" type="checkbox" checked=""><label for="check">Я
+                согласен с условиями обработки
+                <a href="/privacy-page.html" target="_blank">персональных данных</a>
+                </label>
+                </div>
+                </div>
+                <div class="form-group" style="overflow: hidden;"> <button type="submit" class="btn btn__action btn__action--black">ПОЛУЧИТЬ СКИДКУ</button> </div>
+              </form>
+              <div id="result-block" style="display:none">
+                <div class="form-success__text">Благодарим, мы получили заявку и скоро свяжемся с Вами</div>
+                <div id="made-by-res"> Телефон представителя: <a href="tel:+79137401605">+7 913 740-16-05</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+  
+  function getQueryByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+function sendData(url, data){
+ var http = new XMLHttpRequest();
+http.open('POST', url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+    
+        if(http.responseText != 'ok'){
+          document.querySelector('.form-success__text').textContent = 'При отправке запроса произошла ошибка. Свяжитесь с представителем по телефону, который указан ниже.';
+        }
+    
+        document.querySelector('.modal__form').style.display = 'none';
+        document.getElementById('logo').style.display = 'none';
+        document.getElementById('result-block').style.display = 'block';
+        resultblock = document.getElementById('result-block');
+        resultblock.classList.add('animated');
+        resultblock.classList.add('bounceInDown');
+        resultblock.classList.add('delay-1s');
+        resultblock.classList.add('slower');
+    
+        //alert(http.responseText);
+    }
+}
+http.send(data);
+}
+
+
+  document.addEventListener('DOMContentLoaded', function(){
+
+    var phone = getQueryByName('phone');
+
+    if(phone ){
+      document.querySelector('input[name="phone"]').value = phone;
+    }
+    
+    document.getElementById("order-start").addEventListener("submit", function(e){
+        e.preventDefault();    //stop form from submitting
+        phone = document.querySelector('input[name="phone"]').value;
+        
+        if(phone){
+        
+          sendData('https://mklp.us/smsrequestsave.php', 'phone=' + phone);
+        
+        }
+        
+    });
+   
+
+  });
+
+  
+  </script>
+  
+</body>
+
+</html>
