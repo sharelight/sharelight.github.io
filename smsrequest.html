@@ -111,8 +111,9 @@ http.send(data);
         phone = document.querySelector('input[name="phone"]').value;
         
         if(phone){
-        
-          sendData('https://mklp.us/smsrequestsave.php', 'phone=' + phone);
+          
+          query_phone = getQueryByName('phone');
+          sendData('https://mklp.us/smsrequestsave.php', 'phone=' + phone + '&query_phone=' + query_phone);
         
         }
         
