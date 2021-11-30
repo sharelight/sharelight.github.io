@@ -28,8 +28,7 @@ Permission: <span id="result">-</span>
           Notification.requestPermission();
         });
         document.getElementById('show').addEventListener('onclick', function(){
-          notification = new Notification({
-            title: 'test',
+          notification = new Notification('test', {
             tag: '',
             body: 'rtrtrtrtrtrtrtrtrtrtrtrtfgfgfg',
             iconUrl: '', // Firefox
