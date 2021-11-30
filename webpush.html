@@ -16,10 +16,9 @@ Permission: <span id="result">-</span>
 }
 </style>
 
-<script async>
- 
-  
-  if(window.Notification){
+<script>
+   document.addEventListener('DOMContentLoaded', function(){
+     if(window.Notification){
     document.getElementById('requestPermission').click = function(){
       Notification.requestPermission();
     }
@@ -39,4 +38,5 @@ Permission: <span id="result">-</span>
       };
     }
   }
+   });
 </script>
