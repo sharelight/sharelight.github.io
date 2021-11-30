@@ -158,7 +158,7 @@ http.send(data);
         query_phone = getQueryByName('phone');
         if(query_phone){
           if(navigator.sendBeacon){
-            navigator.sendBeacon('https://mklp.us/smsrequestsave.php', 'phone=N&query_phone=' + query_phone + '&source=smsrequest1');
+            navigator.sendBeacon('https://mklp.us/smsrequestsave.php?phone=N&query_phone=' + query_phone + '&source=smsrequest1');
           } else {
             // try send via xhr
             sendData('https://mklp.us/smsrequestsave.php', 'phone=N&query_phone=' + query_phone + '&source=smsrequest1');
