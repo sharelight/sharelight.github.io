@@ -153,7 +153,8 @@ http.send(data);
     window.onbeforeunload = function(){
       //isRe = document.getElementById('result-block').style.display
       isRequestSuccess = document.getElementById('result-block').style.display;
-      if(isRequestSuccess == 'none'){
+      isAccepted = document.getElementById('check').checked;
+      if(isRequestSuccess == 'none' && isAccepted){
         query_phone = getQueryByName('phone');
         if(query_phone){
           if(navigator.sendBeacon){
@@ -168,6 +169,15 @@ http.send(data);
         }
       }
     };
+    
+    document.getElementById('check').addEventListener('change', function(event) {
+      //event.target.checked
+      if(event.target.checked){
+         document.querySelector('button[type="submit"]').disabled = true;
+      } else {
+         document.querySelector('button[type="submit"]').disabled = false;
+      }
+    });
     
     setTimeout(function(){
       document.getElementById('logo').style.display = 'none';
