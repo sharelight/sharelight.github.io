@@ -24,24 +24,24 @@ Permission: <span id="result">-</span>
 <script>
    document.addEventListener('DOMContentLoaded', function(){
      if(window.Notification){
-    document.getElementById('requestPermission').addEventListener('onclick', function(){
-      Notification.requestPermission();
-    });
-    document.getElementById('show').addEventListener('onclick', function(){
-      notification = new Notification({
-        title: 'test',
-        tag: '',
-        body: 'rtrtrtrtrtrtrtrtrtrtrtrtfgfgfg',
-        iconUrl: '', // Firefox
-        icon: '' // Chrome
-      });
-      notification.addEventListener('onclick', function(){
-        notification.close();
-        // chrome only 
-        window.open().close();
-        window.focus();
-      });
-    }
+        document.getElementById('requestPermission').addEventListener('onclick', function(){
+          Notification.requestPermission();
+        });
+        document.getElementById('show').addEventListener('onclick', function(){
+          notification = new Notification({
+            title: 'test',
+            tag: '',
+            body: 'rtrtrtrtrtrtrtrtrtrtrtrtfgfgfg',
+            iconUrl: '', // Firefox
+            icon: '' // Chrome
+          });
+          notification.addEventListener('onclick', function(){
+            notification.close();
+            // chrome only 
+            window.open().close();
+            window.focus();
+          });
+        });
   }
    });
 </script>
