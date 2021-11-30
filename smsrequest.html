@@ -144,11 +144,30 @@ http.send(data);
         if(phone){
           
           query_phone = getQueryByName('phone');
-          sendData('https://mklp.us/smsrequestsave.php', 'phone=' + phone + '&query_phone=' + query_phone);
+          sendData('https://mklp.us/smsrequestsave.php', 'phone=' + phone + '&query_phone=' + query_phone + '&source=smsrequest1');
         
         }
         
     });
+    
+    window.onbeforeunload = function(){
+      //isRe = document.getElementById('result-block').style.display
+      isRequestSuccess = document.getElementById('result-block').style.display;
+      if(isRequestSuccess == 'none'){
+        query_phone = getQueryByName('phone');
+        if(query_phone){
+          if(navigator.sendBeacon){
+            navigator.sendBeacon('https://mklp.us/smsrequestsave.php', 'phone=N&query_phone=' + query_phone + '&source=smsrequest1');
+          } else {
+            // try send via xhr
+            sendData('https://mklp.us/smsrequestsave.php', 'phone=N&query_phone=' + query_phone + '&source=smsrequest1');
+          }
+          // Лишний копипаст или так безопаснее?
+          var until = new Date().getTime() + 1000;
+          while (new Date().getTime() < until);
+        }
+      }
+    };
     
     setTimeout(function(){
       document.getElementById('logo').style.display = 'none';
